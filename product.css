@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body{
+    background-image: url(./images/istockphoto-1161981160-1024x1024.jpg);
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    margin-top: 50px;
+ flex-wrap: wrap;
+ 
+}
+/* .container-1{
+    margin-top: -120px;
+    
+} */
+
+.nav1{
+    padding: 5px !important;
+   font-size: 20px !important;
+   
+  }
+  .effect a:hover{
+  color: #369e62 !important;
+  }
+  .search{
+    margin-right: 300px;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+   
+}
+.searchInput{
+    border: none;
+    background-color: transparent;
+   
+    
+}
+.searchInput::placeholder{
+    color: lightgray;
+}
+.limittedOffer{
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+    color: white;
+}
+.container .card{
+    position: relative;
+    width: 280px;
+    height: 480px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: gray;
+ margin-top: 30px;
+}
+
+.container .green{
+    background: rgb(3, 90, 3);
+}
+.container .orange{
+    background: orangered;
+}
+.container .lightgreen{
+    background: rgb(28, 87, 28);
+}
+.container .peach{
+    background: lightgrey;
+}
+#color1{
+    background: rgb(3, 90, 3);
+}
+#color2{
+    background: gray;
+}
+#color3{
+    background: black;
+}
+#color4{
+    background: lightgray;
+}
+#color5{
+    background: white;
+}
+#color6{
+background: green;
+}
+#color7{
+    background: gray;
+}
+#color8{
+    background: black;
+}
+.container .card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+background: black;
+clip-path: circle(150px at 80% 20%);
+transition: 0.5s ease-in-out;
+}
+.container .card:hover::before{
+    clip-path: circle(300px at 80% -20%);
+ 
+}
+.container .card::after{
+    content: 'Nike';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+font-size: 12em;
+font-weight: 800;
+font-style: italic;
+color: rgba(255, 255, 255, 0.04);
+}
+.container .card .imgBx{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 300px;
+    transition: 0.5s !important;
+}
+.container .card:hover .imgBx{
+    top: 0;
+    transform: translateY(0%);
+}
+.container .card:hover .imgBx img{
+    position: absolute;
+    margin-bottom: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-20deg) !important;
+    width: 250px;
+}
+.container .card .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 19px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.container .card:hover .contentBx{
+    height: 195px;
+
+}
+.container .card .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: black;
+
+}
+.container .card .contentBx .size,
+.container .card .contentBx .color
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+opacity: 0;
+visibility: hidden;
+}
+.container .card:hover .contentBx .size{
+opacity: 1;
+visibility: visible;
+transition-delay:0.5s ;
+}
+.container .card:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay:0.6s ;
+    }
+
+.container .card .contentBx .size h3,
+.container .card .contentBx .color h3
+{
+color: black;
+font-weight: 300;
+font-size: 14px;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-right: 10px;
+}
+.container .card .contentBx .size span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+.container .card .contentBx .size span:hover{
+    background: black;
+    color: white
+}
+.container .card .contentBx .color span{
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+    margin: 0.5px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+.container .card .contentBx .color span:nth-child(2){
+    background: darkblue;
+}
+.container .card .contentBx a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #111;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s; 
+    cursor: pointer;  
+}
+.container .card:hover .contentBx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+}
+footer{
+    display: flex;
+color: white;
+font-weight: 300;
+}
+.footerLeft{
+    flex: 2;
+display: flex;
+justify-content: space-between;
+padding: 50px;
+}
+.fMenuTitle{
+font-size: 16px;
+
+}
+
+.fMenuList{
+padding: 0;
+list-style: none;
+}
+.fListItem{
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+color: white;
+}
+
+
+.footerRight{
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+color: white;
+}
+.fInput{
+    padding: 5px;
+
+}
+.fButton{
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+.fIcons{
+    display: flex;
+}
+.fIcon{
+    width: 50px;
+    height: 50px;
+    
+    margin-right: 10px;
+    padding: 8px;
+cursor: pointer;
+
+}
+
+.copyright{
+    font-weight: 300;
+    font-size: 14px;
+    color: white;
+}
+.last{
+    background: url(./images/unsplash.avif);
+    display: flex;
+    width: 100%;
+}
+
+@media screen and (max-width:480px) {
+    .payment{
+      width: 90% !important;
+        padding: 20px;
+       
+       
+    }
+    .search{
+        display: none;
+    }
+    .limittedOffer{
+        display: none;
+    }
+    .last{
+        flex-direction: column;
+        align-items: center;
+    }
+.container{
+    flex-direction: column;
+   
+}
+.container .card{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.container-1 {
+    margin-top: 50px;
+}
+    .footerLeft{
+        padding: 20px;
+        width: 90%;
+    }
+    .footerRight{
+       padding-bottom:0 ;
+        width: 100%;
+        align-items: center;
+        background-color: rgb(148, 147, 147);
+        color: black;
+    
+    }
+    .end{
+        background-color: black;
+        margin-left: -50%;
+        margin-right: -28%;
+        
+        text-align: center;
+    padding: 10px;
+    }
+   
+}
+#preloader{
+    background: rgb(255, 255, 255) url(./images/preloader.gif) no-repeat center center;
+    background-size: 15%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+}
+.payment{
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10000;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.87); 
+box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.87);
+}
+
+.payTitle{
+    font-size: 20px;
+    color: rgb(180, 179, 179);
+
+}
+label{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.payInput{
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+
+}
+
+.payInput::placeholder{
+    color: rgb(163, 163, 163);
+}
+
+.cardIcons{
+    display: flex; 
+}
+.cardIcon{
+    margin-right: 10px;
+
+}
+
+.cardInfo{
+    display: flex;
+    justify-content: space-between;
+
+}
+ .sm{
+width: 30%;
+
+}
+
+.payButton{
+    position: absolute;
+    height: 40px;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    -webkit-box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.87); 
+box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.87);
+background-color: #369e62;
+color: white;
+border: none;
+cursor: pointer;
+}
+.close{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: gray;
+    color: black;
+    top: 10px;
+    right: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+padding: 2px;
+}
